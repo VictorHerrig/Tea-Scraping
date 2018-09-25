@@ -1,6 +1,9 @@
 import scrapy
 from scrapy.crawler import CrawlerProcess
-from spiders.TeaSpring import TeaSpringSpider
+#from spiders.TeaSpring import TeaSpringSpider
+#from spiders.AshaTeaHouse import AshaSpider
+#from spiders.EsGreen import EsGreenSpider
+from spiders import TeaSpiders
 
 process = CrawlerProcess({'USER_AGENT': 'TeaScraping (+https://github.com/VictorHerrig)',
                           'ROBOTSTXT_OBEY': True,
@@ -10,5 +13,10 @@ process = CrawlerProcess({'USER_AGENT': 'TeaScraping (+https://github.com/Victor
                           'IMAGES_STORE': 'images/',
                           'LOG_ENABLED': False
                           })
-process.crawl(TeaSpringSpider)
+process.crawl(TeaSpiders.TeaSpringSpider)
+process.crawl(TeaSpiders.AshaSpider)
+process.crawl(TeaSpiders.EsGreenSpider)
+process.crawl(TeaSpiders.MeiLeafSpider)
+process.crawl(TeaSpiders.IppodoSpider)
 process.start()
+process.stop()
