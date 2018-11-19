@@ -39,9 +39,9 @@ class ImageProcessingPipeline(object):
             size = image.size
             #Crop the image to a box if not already
             if (size[0] - size[1]) > 1:
-                image = image.crop(((size[0] - size[1]) / 2,size[0] - ((size[0] - size[1]) / 2),0,size[1]))
+                image = image.crop(((size[0] - size[1]) / 2, 0, size[0] - ((size[0] - size[1]) / 2), size[1]))
             elif (size[1] - size[0]) > 1:
-                image = image.crop((0, size[0], (size[1] - size[0]) / 2, size[1] - ((size[1] - size[0]) / 2)))
+                image = image.crop((0, (size[1] - size[0]) / 2, size[0], size[1] - ((size[1] - size[0]) / 2)))
             image = image.resize((512, 512))
             #imgArr = np.array(image)
             altPath = imgPath.replace("full", "alt")
