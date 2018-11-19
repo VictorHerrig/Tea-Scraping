@@ -12,9 +12,9 @@ Destination for the rest of the data: OUT_PATH param in WritingPipeline class in
 To use, run 'python <path-to-file>/RunSpiders.py'
 </p><br/><p>
 Sites included so far:
-TeaSpring\n
-Asha Teahouse\n
-ESGreen\n
-Mei Leaf\n
-Ippodo\n
+TeaSpring <br/>
+Asha Teahouse <br/>
+ESGreen <br/>
+Mei Leaf <br/>
+Ippodo <br/>
 </p>
